@@ -193,6 +193,7 @@ const PomodoroClock = (function() {
       const tickSize = settingsDep.size.tickSize;
 
       ctx.clearRect(0, 0, settingsDep.canvas.width, settingsDep.canvas.height);
+      ctx.globalCompositeOperation = 'darken';
 
       ctx.save();
 
@@ -212,11 +213,6 @@ const PomodoroClock = (function() {
         ctx.strokeStyle = settingsDep.color[sessionDep.current].base;
       }
 
-      // if (sessionDep.current === 'work') {
-      //   ctx.fillStyle = settingsDep.color.break.light;
-      // } else {
-      //   ctx.fillStyle = settingsDep.color[sessionDep.current].light;
-      // }
       ctx.fillStyle = '#fff';
 
       ctx.arc(0, 0, outerRadius, 0, Math.PI * 2);
@@ -257,13 +253,14 @@ const PomodoroClock = (function() {
       ctx.fillRect(outerRadius + 23, -15, 10, 30);
       ctx.restore();
 
-      // Visualize current period
+      // Visualize periods
       if (sessionDep.current !== 'none') {
         ctx.save();
 
         // Start at current time angle + time left angle
         ctx.rotate(sessionDep.startedAtAngle + sessionDep.pausedForAngle);
 
+        // Visualize current period
         if (sessionDep.current === 'work') {
           // Show work period
           ctx.beginPath();
@@ -282,16 +279,7 @@ const PomodoroClock = (function() {
           ctx.fill();
         }
 
-        ctx.restore();
-      }
-
-      // Visualize upcoming period
-      if (sessionDep.current !== 'none') {
-        ctx.save();
-
-        // Start at current time angle + time left angle
-        ctx.rotate(sessionDep.startedAtAngle + sessionDep.pausedForAngle);
-
+        // Visualize upcoming period
         if (sessionDep.current === 'work') {
           // Show upcoming break period
           ctx.beginPath();
