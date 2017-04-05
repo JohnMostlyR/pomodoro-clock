@@ -1,0 +1,40 @@
+//
+// Fonts
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// https://www.smashingmagazine.com/2013/02/setting-weights-and-styles-at-font-face-declaration/
+
+// Regular font
+@mixin base-font-regular() {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+// Italic font
+@mixin base-font-italic() {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+// Bold font
+@mixin base-font-bold() {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+// Bold Italic font
+@mixin base-font-bold-italic() {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+// Heading font
+@mixin heading-font() {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+}

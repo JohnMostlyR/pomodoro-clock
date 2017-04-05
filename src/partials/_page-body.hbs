@@ -1,0 +1,48 @@
+<body id="js-body" class="c-body">
+<main>
+  <section class="c-pom">
+    <header class="c-pom__header">
+      <h1 class="c-pom__title">Pomodoro Clock<a class="c-pom__link" href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank">say what?!</a></h1>
+    </header>
+    <div class="l-pom__display">
+      <div class="c-pom__display">
+        <canvas id="js-pom-canvas" class="c-pom__canvas" width="320" height="372">Sorry, no support</canvas>
+        <button id="js-pom-start" class="c-pom__btn c-pom__btn--start">start</button>
+        <button id="js-pom-stop" class="c-pom__btn c-pom__btn--stop">stop</button>
+      </div>
+    </div>
+    <div class="l-pom__feedback">
+      <div id="js-pom-feedback" class="c-pom__feedback"></div>
+      <output id="js-pom-feedback-aria" class="c-pom__feedback--aria"></output>
+    </div>
+    <form action="#" class="c-pom__form">
+      <fieldset class="c-pom__fieldset">
+        <lable for="js-pom-work" class="c-pom__lable">Work period
+          <output id="js-pom-workperiod" class="c-pom__workperiod"></output>
+        </lable>
+        <div class="c-pom__slider-group">
+          <button type="button" id="js-pom-work-down" class="c-pom__btn-updown">-</button>
+          <input type="range" min="1" max="60" value="25" name="work" title="work" id="js-pom-work"
+                 class="c-pom__range c-pom__range--work">
+          <button type="button" id="js-pom-work-up" class="c-pom__btn-updown">+</button>
+        </div>
+      </fieldset>
+      <fieldset class="c-pom__fieldset">
+        <lable for="js-pom-break" class="c-pom__lable">Break period
+          <output id="js-pom-breakperiod" class="c-pom__breakperiod"></output>
+        </lable>
+        <div class="c-pom__slider-group">
+          <button type="button" id="js-pom-break-down" class="c-pom__btn-updown">-</button>
+          <input type="range" min="1" max="20" value="5" name="break" title="break" id="js-pom-break"
+                 class="c-pom__range c-pom__range--break">
+          <button type="button" id="js-pom-break-up" class="c-pom__btn-updown">+</button>
+        </div>
+      </fieldset>
+    </form>
+    <audio id="js-pom-sound" preload="auto" style="display:none;">
+      <source src="https://new-bucket-24e33eed.s3.amazonaws.com/chime_bell_ding.mp3" type="audio/mp3">
+      <source src="https://new-bucket-24e33eed.s3.amazonaws.com/chime_bell_ding.ogg" type="audio/ogg">
+    </audio>
+  </section>
+</main>
+</body>
