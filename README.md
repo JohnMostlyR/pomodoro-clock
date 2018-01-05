@@ -1,5 +1,7 @@
 # Pomodoro Clock
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Mensae/pomodoro-clock.svg)](https://greenkeeper.io/)
+
 Pomodoro Clock
 
 ## Setting Up
